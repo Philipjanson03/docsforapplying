@@ -96,6 +96,8 @@ permalink: "notes/{{ page.fileSlug | slugify }}/"
 (function() {
     'use strict';
     
+    console.log('🔧 Interactive checkboxes script starting...');
+    
     function getCheckboxId(checkbox) {
         const parent = checkbox.closest('li, p');
         if (!parent) return null;
@@ -111,7 +113,7 @@ permalink: "notes/{{ page.fileSlug | slugify }}/"
             states[checkboxId] = checked;
             localStorage.setItem('dg-checkboxes', JSON.stringify(states));
         } catch (e) {
-            console.error('Error saving checkbox state:', e);
+            console.error('Error saving:', e);
         }
     }
     
@@ -124,44 +126,78 @@ permalink: "notes/{{ page.fileSlug | slugify }}/"
         }
     }
     
-    function initializeCheckboxes() {
-        const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+    function enableAndInitialize(checkbox) {
+        // Force remove disabled - multiple methods
+        checkbox.removeAttribute('disabled');
+        checkbox.disabled = false;
+        checkbox.readOnly = false;
         
-        console.log('Found', checkboxes.length, 'checkboxes');
+        // Visual styling
+        checkbox.style.cursor = 'pointer';
+        checkbox.style.pointerEvents = 'auto';
         
-        checkboxes.forEach(checkbox => {
-            // REMOVE DISABLED ATTRIBUTE - THIS IS THE KEY FIX!
-            checkbox.removeAttribute('disabled');
-            checkbox.disabled = false;
-            
-            const checkboxId = getCheckboxId(checkbox);
-            if (!checkboxId) return;
-            
-            const savedState = loadCheckboxState(checkboxId);
-            if (savedState !== checkbox.checked) {
-                checkbox.checked = savedState;
+        // Get ID and load state
+        const id = getCheckboxId(checkbox);
+        if (id) {
+            checkbox.checked = loadCheckboxState(id);
+        }
+        
+        // Remove old listeners and add new one
+        const newCb = checkbox.cloneNode(true);
+        checkbox.parentNode.replaceChild(newCb, checkbox);
+        
+        newCb.addEventListener('change', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            const cbId = getCheckboxId(this);
+            if (cbId) {
+                saveCheckboxState(cbId, this.checked);
+                console.log('✅ Checkbox toggled:', cbId, this.checked);
             }
-            
-            checkbox.addEventListener('change', function() {
-                console.log('Checkbox changed:', checkboxId, this.checked);
-                saveCheckboxState(checkboxId, this.checked);
-            });
-            
-            checkbox.style.cursor = 'pointer';
         });
+        
+        // Mark as initialized
+        newCb.setAttribute('data-dg-init', 'true');
     }
     
-    // Run immediately and also after DOM loads
+    function processAllCheckboxes() {
+        const all = document.querySelectorAll('input[type="checkbox"]');
+        console.log('📋 Found', all.length, 'checkboxes');
+        
+        all.forEach(cb => {
+            if (!cb.hasAttribute('data-dg-init')) {
+                enableAndInitialize(cb);
+            }
+        });
+        
+        return all.length;
+    }
+    
+    // Run when DOM ready
     if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', initializeCheckboxes);
+        document.addEventListener('DOMContentLoaded', processAllCheckboxes);
     } else {
-        initializeCheckboxes();
+        processAllCheckboxes();
     }
     
-    // Also run after delays to catch any dynamically loaded content
-    setTimeout(initializeCheckboxes, 500);
-    setTimeout(initializeCheckboxes, 1000);
-    setTimeout(initializeCheckboxes, 2000);
+    // Watch for new checkboxes
+    const observer = new MutationObserver(() => {
+        const newOnes = document.querySelectorAll('input[type="checkbox"]:not([data-dg-init])');
+        if (newOnes.length > 0) {
+            newOnes.forEach(enableAndInitialize);
+        }
+    });
+    
+    observer.observe(document.body, { childList: true, subtree: true });
+    
+    // Backup: check periodically
+    let count = 0;
+    const backup = setInterval(() => {
+        processAllCheckboxes();
+        if (++count >= 5) clearInterval(backup);
+    }, 2000);
+    
+    console.log('✅ Script initialized');
 })();
 </script>
   </body>
