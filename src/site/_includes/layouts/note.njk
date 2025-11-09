@@ -127,7 +127,13 @@ permalink: "notes/{{ page.fileSlug | slugify }}/"
     function initializeCheckboxes() {
         const checkboxes = document.querySelectorAll('input[type="checkbox"]');
         
+        console.log('Found', checkboxes.length, 'checkboxes');
+        
         checkboxes.forEach(checkbox => {
+            // REMOVE DISABLED ATTRIBUTE - THIS IS THE KEY FIX!
+            checkbox.removeAttribute('disabled');
+            checkbox.disabled = false;
+            
             const checkboxId = getCheckboxId(checkbox);
             if (!checkboxId) return;
             
@@ -137,6 +143,7 @@ permalink: "notes/{{ page.fileSlug | slugify }}/"
             }
             
             checkbox.addEventListener('change', function() {
+                console.log('Checkbox changed:', checkboxId, this.checked);
                 saveCheckboxState(checkboxId, this.checked);
             });
             
@@ -144,13 +151,17 @@ permalink: "notes/{{ page.fileSlug | slugify }}/"
         });
     }
     
+    // Run immediately and also after DOM loads
     if (document.readyState === 'loading') {
         document.addEventListener('DOMContentLoaded', initializeCheckboxes);
     } else {
         initializeCheckboxes();
     }
     
+    // Also run after delays to catch any dynamically loaded content
     setTimeout(initializeCheckboxes, 500);
+    setTimeout(initializeCheckboxes, 1000);
+    setTimeout(initializeCheckboxes, 2000);
 })();
 </script>
   </body>
