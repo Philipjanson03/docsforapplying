@@ -96,7 +96,7 @@ permalink: "notes/{{ page.fileSlug | slugify }}/"
 (function() {
     'use strict';
     
-    console.log('🔧 Interactive checkboxes script starting...');
+    console.log('🔧 Aggressive checkbox fix starting...');
     
     function getCheckboxId(checkbox) {
         const parent = checkbox.closest('li, p');
@@ -126,25 +126,39 @@ permalink: "notes/{{ page.fileSlug | slugify }}/"
         }
     }
     
-    function enableAndInitialize(checkbox) {
-        // Force remove disabled - multiple methods
+    function forceRemoveDisabled(checkbox) {
+        // AGGRESSIVE: Remove disabled attribute multiple ways
         checkbox.removeAttribute('disabled');
         checkbox.disabled = false;
         checkbox.readOnly = false;
         
-        // Visual styling
+        // Try to override the disabled property
+        try {
+            Object.defineProperty(checkbox, 'disabled', {
+                value: false,
+                writable: false,
+                configurable: true
+            });
+        } catch (e) {
+            // If that fails, we'll just keep removing it
+        }
+        
         checkbox.style.cursor = 'pointer';
         checkbox.style.pointerEvents = 'auto';
+    }
+    
+    function setupCheckbox(checkbox) {
+        forceRemoveDisabled(checkbox);
         
-        // Get ID and load state
         const id = getCheckboxId(checkbox);
         if (id) {
             checkbox.checked = loadCheckboxState(id);
         }
         
-        // Remove old listeners and add new one
+        // Clone to remove any existing listeners
         const newCb = checkbox.cloneNode(true);
         checkbox.parentNode.replaceChild(newCb, checkbox);
+        forceRemoveDisabled(newCb);
         
         newCb.addEventListener('change', function(e) {
             e.preventDefault();
@@ -154,50 +168,95 @@ permalink: "notes/{{ page.fileSlug | slugify }}/"
                 saveCheckboxState(cbId, this.checked);
                 console.log('✅ Checkbox toggled:', cbId, this.checked);
             }
-        });
+        }, true);
         
-        // Mark as initialized
-        newCb.setAttribute('data-dg-init', 'true');
+        newCb.setAttribute('data-dg-enabled', 'true');
+        return newCb;
     }
     
-    function processAllCheckboxes() {
+    function processAll() {
         const all = document.querySelectorAll('input[type="checkbox"]');
-        console.log('📋 Found', all.length, 'checkboxes');
         
         all.forEach(cb => {
-            if (!cb.hasAttribute('data-dg-init')) {
-                enableAndInitialize(cb);
+            // ALWAYS remove disabled, even if already processed
+            forceRemoveDisabled(cb);
+            
+            if (!cb.hasAttribute('data-dg-enabled')) {
+                setupCheckbox(cb);
             }
         });
         
         return all.length;
     }
     
-    // Run when DOM ready
-    if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', processAllCheckboxes);
-    } else {
-        processAllCheckboxes();
+    // Initial processing
+    function init() {
+        const count = processAll();
+        console.log('📋 Processed', count, 'checkboxes');
     }
     
-    // Watch for new checkboxes
-    const observer = new MutationObserver(() => {
-        const newOnes = document.querySelectorAll('input[type="checkbox"]:not([data-dg-init])');
-        if (newOnes.length > 0) {
-            newOnes.forEach(enableAndInitialize);
-        }
+    init();
+    
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', init);
+    }
+    
+    // AGGRESSIVE: Run every 300ms to continuously remove disabled
+    setInterval(function() {
+        const all = document.querySelectorAll('input[type="checkbox"]');
+        all.forEach(cb => {
+            // Force remove disabled every time
+            if (cb.disabled || cb.hasAttribute('disabled')) {
+                forceRemoveDisabled(cb);
+            }
+        });
+    }, 300);
+    
+    // Watch for attribute changes
+    const observer = new MutationObserver(function(mutations) {
+        mutations.forEach(function(mutation) {
+            if (mutation.type === 'attributes' && mutation.attributeName === 'disabled') {
+                const target = mutation.target;
+                if (target.type === 'checkbox') {
+                    forceRemoveDisabled(target);
+                }
+            }
+            // Also check for new nodes
+            mutation.addedNodes.forEach(function(node) {
+                if (node.nodeType === 1) {
+                    const checkboxes = node.querySelectorAll ? node.querySelectorAll('input[type="checkbox"]') : [];
+                    checkboxes.forEach(cb => {
+                        forceRemoveDisabled(cb);
+                        if (!cb.hasAttribute('data-dg-enabled')) {
+                            setupCheckbox(cb);
+                        }
+                    });
+                    if (node.tagName === 'INPUT' && node.type === 'checkbox') {
+                        forceRemoveDisabled(node);
+                        if (!node.hasAttribute('data-dg-enabled')) {
+                            setupCheckbox(node);
+                        }
+                    }
+                }
+            });
+        });
     });
     
-    observer.observe(document.body, { childList: true, subtree: true });
+    observer.observe(document.body, {
+        childList: true,
+        subtree: true,
+        attributes: true,
+        attributeFilter: ['disabled']
+    });
     
-    // Backup: check periodically
-    let count = 0;
-    const backup = setInterval(() => {
-        processAllCheckboxes();
-        if (++count >= 5) clearInterval(backup);
-    }, 2000);
+    // Multiple delayed runs
+    setTimeout(init, 100);
+    setTimeout(init, 500);
+    setTimeout(init, 1000);
+    setTimeout(init, 2000);
+    setTimeout(init, 5000);
     
-    console.log('✅ Script initialized');
+    console.log('✅ Aggressive fix active - disabled attribute will be continuously removed');
 })();
 </script>
   </body>
