@@ -104,7 +104,7 @@
 
 ## 🔗 Related Notes
 
-- [[Docs for applying/Italy AI-ML Masters - Main Hub\|Italy AI-ML Masters - Main Hub]] - Italian universities comparison
+- [[Docs for applying/Italy/Italy AI-ML Masters - Main Hub\|Italy AI-ML Masters - Main Hub]] - Italian universities comparison
 - [[Docs for applying/Application Timeline 2026\|Application Timeline 2026]] - Combined timeline for all applications
 
 ---
@@ -134,3 +134,10 @@ This note serves as a central hub in your knowledge graph. In Obsidian's graph v
 
 ← [[Master Application Hub - Home\|Back to Main Hub]]
 
+---
+
+## 🔗 Navigation
+
+← [[Master Application Hub - Home\|Back to Main Hub]]
+
+---

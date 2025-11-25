@@ -733,7 +733,7 @@ Thousands of Iranian students have successfully studied in Italy. Yes, there are
 
 ---
 
-Back to: [[Docs for applying/Italy AI-ML Masters - Main Hub\|Italy AI-ML Masters - Main Hub]]
+Back to: [[Docs for applying/Italy/Italy AI-ML Masters - Main Hub\|Italy AI-ML Masters - Main Hub]]
 Related: [[Docs for applying/Application Timeline 2026\|Application Timeline 2026]], [[Docs for applying/Application Documents Checklist\|Application Documents Checklist]], [[Visa Application Process\|Visa Application Process]]
 
 **Last Updated:** November 2, 2025

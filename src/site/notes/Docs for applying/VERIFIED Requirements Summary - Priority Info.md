@@ -26,10 +26,10 @@ This note contains **ONLY** the priority information you requested:
 
 | University | IELTS Min | TOEFL iBT Min | **Minimum Average (Iran 0-20)** | Verification |
 |------------|-----------|---------------|----------------------------------|--------------|
-| [[Docs for applying/Politecnico di Milano\|Politecnico di Milano]] | **6.0** | **78** | **✅ 15.5/20** (OFFICIALLY STATED) | ✅ Official |
-| [[Docs for applying/Sapienza University of Rome\|Sapienza University of Rome]] | **6.0** | **80** | Not officially specified | ✅ Official |
-| [[Docs for applying/University of Bologna\|University of Bologna]] | **5.5-6.5** | **72-94** | Not officially specified | ✅ Official |
-| [[Docs for applying/University of Pisa\|University of Pisa]] | **6.0** (B2) | Accepted (B2) | Not officially specified | ✅ Official |
+| [[Docs for applying/Italy/Politecnico di Milano\|Politecnico di Milano]] | **6.0** | **78** | **✅ 15.5/20** (OFFICIALLY STATED) | ✅ Official |
+| [[Docs for applying/Italy/Sapienza University of Rome\|Sapienza University of Rome]] | **6.0** | **80** | Not officially specified | ✅ Official |
+| [[Docs for applying/Italy/University of Bologna\|University of Bologna]] | **5.5-6.5** | **72-94** | Not officially specified | ✅ Official |
+| [[Docs for applying/Italy/University of Pisa\|University of Pisa]] | **6.0** (B2) | Accepted (B2) | Not officially specified | ✅ Official |
 | [[University of Padua\|University of Padua]] | **6.0** | **80** | Not officially specified | ✅ Official |
 | [[University of Trento\|University of Trento]] | **6.5** | **90** | Not officially specified | ✅ Official |
 | [[Politecnico di Torino\|Politecnico di Torino]] | **6.0** | **78** | Not officially specified | ✅ Official |
@@ -63,7 +63,7 @@ This note contains **ONLY** the priority information you requested:
 - Language: [PoliMi Language Requirements](https://www.polimi.it/en/students/language-requirements/students-of-laurea-magistrale-study-programmes)
 - GPA: [PoliMi Foreign Qualification Requirements](https://www1.polimi.it/en/prospective-students/how-to-apply/admission-to-laurea-magistrale/foreign-qualification/requirements)
 
-**See full details:** [[Docs for applying/Politecnico di Milano\|Politecnico di Milano]]
+**See full details:** [[Docs for applying/Italy/Politecnico di Milano\|Politecnico di Milano]]
 
 ---
 
@@ -73,7 +73,7 @@ This note contains **ONLY** the priority information you requested:
 **TOEFL iBT:** 80 minimum  
 **Minimum Average (Iran):** Not officially specified (holistic evaluation)
 
-**See full details:** [[Docs for applying/Sapienza University of Rome\|Sapienza University of Rome]]
+**See full details:** [[Docs for applying/Italy/Sapienza University of Rome\|Sapienza University of Rome]]
 
 ---
 
@@ -85,7 +85,7 @@ This note contains **ONLY** the priority information you requested:
 
 **Advantage:** Most flexible English requirements - accepts IELTS as low as 5.5
 
-**See full details:** [[Docs for applying/University of Bologna\|University of Bologna]]
+**See full details:** [[Docs for applying/Italy/University of Bologna\|University of Bologna]]
 
 ---
 
@@ -97,7 +97,7 @@ This note contains **ONLY** the priority information you requested:
 
 **Advantage:** Flexible - certificate can be provided after admission
 
-**See full details:** [[Docs for applying/University of Pisa\|University of Pisa]]
+**See full details:** [[Docs for applying/Italy/University of Pisa\|University of Pisa]]
 
 ---
 
@@ -179,15 +179,15 @@ This note contains **ONLY** the priority information you requested:
 
 ## 🔗 Related Notes
 
-- [[Docs for applying/Italian Universities - Admission Requirements Index\|Italian Universities - Admission Requirements Index]] - Comprehensive comparison index
-- [[Docs for applying/Italy AI-ML Masters - Main Hub\|Italy AI-ML Masters - Main Hub]] - Main application hub
+- [[Docs for applying/Italy/Italian Universities - Admission Requirements Index\|Italian Universities - Admission Requirements Index]] - Comprehensive comparison index
+- [[Docs for applying/Italy/Italy AI-ML Masters - Main Hub\|Italy AI-ML Masters - Main Hub]] - Main application hub
 - [[Docs for applying/Application Timeline 2026\|Application Timeline 2026]] - Important deadlines
 
 **Individual University Notes:**
-- [[Docs for applying/Politecnico di Milano\|Politecnico di Milano]]
-- [[Docs for applying/Sapienza University of Rome\|Sapienza University of Rome]]
-- [[Docs for applying/University of Bologna\|University of Bologna]]
-- [[Docs for applying/University of Pisa\|University of Pisa]]
+- [[Docs for applying/Italy/Politecnico di Milano\|Politecnico di Milano]]
+- [[Docs for applying/Italy/Sapienza University of Rome\|Sapienza University of Rome]]
+- [[Docs for applying/Italy/University of Bologna\|University of Bologna]]
+- [[Docs for applying/Italy/University of Pisa\|University of Pisa]]
 
 ---
 
@@ -211,8 +211,8 @@ This note serves as a central requirements hub. In Obsidian's graph view:
 - **Connected:** All university notes
 - **Grouped:** Requirements by similarity
 - **Highlighted:** Officially stated requirements
-| [[Docs for applying/Bocconi University\|Bocconi University]] | **6.5** (6.0 each) | **88** | Not officially specified | ✅ Official |
-| [[Docs for applying/University of Catania\|University of Catania]] | **6.0** | **74-80** | Not officially specified | ✅ Official |
+| [[Docs for applying/Italy/Bocconi University\|Bocconi University]] | **6.5** (6.0 each) | **88** | Not officially specified | ✅ Official |
+| [[Docs for applying/Italy/University of Catania\|University of Catania]] | **6.0** | **74-80** | Not officially specified | ✅ Official |
 ### 9. Bocconi University
 
 **IELTS:** 6.5 minimum overall, with at least 6.0 in each section  
@@ -224,7 +224,7 @@ This note serves as a central requirements hub. In Obsidian's graph view:
 
 **Note:** Private university, significantly more expensive (€12,000-€14,000/year) but top-ranked for business and data science programs
 
-**See full details:** [[Docs for applying/Bocconi University\|Bocconi University]]
+**See full details:** [[Docs for applying/Italy/Bocconi University\|Bocconi University]]
 
 ---
 
@@ -236,6 +236,6 @@ This note serves as a central requirements hub. In Obsidian's graph view:
 
 **Note:** Specific requirements may vary by program. Always verify current requirements on official program page before applying.
 
-**See full details:** [[Docs for applying/University of Catania\|University of Catania]]
+**See full details:** [[Docs for applying/Italy/University of Catania\|University of Catania]]
 
 ---

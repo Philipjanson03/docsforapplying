@@ -447,6 +447,6 @@
 
 ---
 
-Back to: [[Docs for applying/Italy AI-ML Masters - Main Hub\|Italy AI-ML Masters - Main Hub]]
-Related: [[Docs for applying/Application Documents Checklist\|Application Documents Checklist]], [[Docs for applying/Italian Government MAECI Scholarship\|Italian Government MAECI Scholarship]], [[Visa Application Process\|Visa Application Process]]
+Back to: [[Docs for applying/Italy/Italy AI-ML Masters - Main Hub\|Italy AI-ML Masters - Main Hub]]
+Related: [[Docs for applying/Application Documents Checklist\|Application Documents Checklist]], [[Docs for applying/Italy/Italian Government MAECI Scholarship\|Italian Government MAECI Scholarship]], [[Visa Application Process\|Visa Application Process]]
 
