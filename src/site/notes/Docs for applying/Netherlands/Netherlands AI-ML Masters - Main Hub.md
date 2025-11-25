@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/Docs for applying/Netherlands/Netherlands AI-ML Masters - Main Hub/","title":"Netherlands AI/ML Master's Programs - Application Guide","tags":["netherlands","masters","AI","ML","application","guide","gardenEntry"]}
+{"dg-publish":true,"permalink":"/Docs for applying/Netherlands/Netherlands AI-ML Masters - Main Hub/","title":"Netherlands AI/ML Master's Programs - Application Guide","tags":["netherlands","masters","AI","ML","application","guide"]}
 ---
 
 # Netherlands AI/ML Master's Application - Main Hub
@@ -131,4 +131,6 @@ This note serves as a central hub in your knowledge graph. In Obsidian's graph v
 - Priority tiers visualized
 - Deadline connections
 ---
+
+← [[Master Application Hub - Home\|Back to Main Hub]]
 

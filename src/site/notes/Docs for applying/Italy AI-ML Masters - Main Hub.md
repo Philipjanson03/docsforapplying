@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/Docs for applying/Italy AI-ML Masters - Main Hub/","title":"Italy AI/ML Master's Application - Main Hub","tags":["main-hub","italy","masters","AI","ML","application","gardenEntry"]}
+{"dg-publish":true,"permalink":"/Docs for applying/Italy AI-ML Masters - Main Hub/","title":"Italy AI/ML Master's Application - Main Hub","tags":["main-hub","italy","masters","AI","ML","application"]}
 ---
 
 # Italy AI/ML Master's Application - Main Hub
