@@ -250,12 +250,12 @@ See detailed list: [[Docs for applying/Application Documents Checklist\|Applicat
 
 ## 🎓 Minimum Requirements Comparison
 
-| University | IELTS | TOEFL iBT | GPA (Iranian) | Tuition/Year |
-|---|---|---|---|---|
-| [[Docs for applying/Politecnico di Milano\|Politecnico di Milano]] | 6.0 | 78 | ~14-15/20 | €3,900 |
-| [[Docs for applying/Sapienza University of Rome\|Sapienza University of Rome]] | 6.0 (B2) | 80 | Not specified | €300-€1,500 |
-| [[Docs for applying/University of Bologna\|University of Bologna]] | 5.5-6.5 | 72-94 | Not specified | €2,295-€3,060 |
-| [[Docs for applying/University of Pisa\|University of Pisa]] | B2 (6.0) | Accepted | Not specified | €2,400 |
+| University                      | IELTS    | TOEFL iBT | GPA (Iranian) | Tuition/Year  |
+| ------------------------------- | -------- | --------- | ------------- | ------------- |
+| [[Docs for applying/Politecnico di Milano\|Politecnico di Milano]]       | 6.0      | 78        | ~14-15/20     | €3,900        |
+| [[Docs for applying/Sapienza University of Rome\|Sapienza University of Rome]] | 6.0 (B2) | 80        | Not specified | €300-€1,500   |
+| [[Docs for applying/University of Bologna\|University of Bologna]]       | 5.5-6.5  | 72-94     | Not specified | €2,295-€3,060 |
+| [[Docs for applying/University of Pisa\|University of Pisa]]          | B2 (6.0) | Accepted  | Not specified | €2,400        |
 
 *Note: Most universities don't officially publish minimum GPA, but competitive programs typically expect 14-15/20 (70-75%) in Iranian system*
 
